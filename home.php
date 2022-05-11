@@ -8,6 +8,15 @@
     <title>Home</title>
 </head>
 <body>
+
+    <nav>
+        <a href="home.php">Home</a>
+        <a href="help.php">Help</a>
+        <a href="profile.php">Profile</a>
+        <a href="messages.php">Messages</a>
+    </nav>
+
+
     <h1>Hello [name]</h1>
     <p>Maybe you can help with these issues?</p>
 
@@ -21,10 +30,6 @@
 
     <h2>Message from the company</h2>
 
-    <div class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-    </div>
+    
 </body>
 </html>
