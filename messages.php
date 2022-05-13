@@ -17,14 +17,7 @@
         <a href="messages.php">Messages</a>
     </nav>
 
-    <img src="/" alt="profile-pic">
-
-    <h1>[name]</h1>
-    <p>[company]</p>
-
-    <a href="settings.php">
-        <img src="images/settings.svg" alt="settings">
-    </a>
+    <input type="text" placeholder="Search..">
     
     
 

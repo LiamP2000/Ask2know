@@ -17,13 +17,16 @@
         <a href="messages.php">Messages</a>
     </nav>
 
-    <img src="/" alt="profile-pic">
+    <a href="account.php">
+        <button>Account</button>
+    </a>
 
-    <h1>[name]</h1>
-    <p>[company]</p>
-
-    <a href="settings.php">
-        <img src="images/settings.svg" alt="settings">
+    <a href="edit_topics.php"> 
+        <button>Topics</button>
+    </a>
+    
+    <a href="profile.php">
+        <img src="images/back-arrow.svg" alt="settings">
     </a>
     
     

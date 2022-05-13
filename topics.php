@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <h1>Topics</h1>
+    <h1 class="header">Topics</h1>
     <p>Add the topics where you could help your colleagues with. You can always add more in the profile section.</p>
 
      
