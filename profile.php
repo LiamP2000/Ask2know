@@ -23,7 +23,7 @@
     <p>[company]</p>
 
     <a href="settings.php">
-        <img src="" alt="settings">
+        <img src="images/settings.svg" alt="settings">
     </a>
     
     
