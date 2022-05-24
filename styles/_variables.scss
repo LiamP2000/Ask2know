@@ -1,0 +1,66 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$primary: #003566;
+$secondary: #FFC300;
+$tertiary:#001d3d ;
+$quaternary:#ffd60a;
+
+$white: #fafafa;
+$lighterWhite: #ffffff;
+$black: #000814;
+$grey: rgb(102, 101, 101);
+$lightgrey: #a4a3a3;
+$lightergrey: #d5d5d5;
+
+$font-weight-thin: 300;
+$font-weight-bold: 700;
+$font-weight-extrabold: 900;
+
+$font-size-xxs: 1rem; /*16*/
+$font-size-xs: 1.3rem; /*20*/
+$font-size-sm: 1.5rem; /*24*/
+$font-size-md: 1.8rem; /*28*/
+$font-size-lg: 2rem; /*32*/
+$font-size-xl: 2.8rem; /*46*/
+$font-size-xxl: 3.5rem; /*56*/
+
+
+body {
+    background-color: $white;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+h1{
+    color: $secondary;
+    font-weight: $font-weight-extrabold;
+    font-size: $font-size-xxl;
+}
+
+h2{
+    color: $secondary;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md;
+    text-align: center;
+}
+
+h3{
+    color: $secondary;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+}
+
+h4{
+    color: $secondary;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xs;
+}
+
+.hidden{
+    display: none;
+}

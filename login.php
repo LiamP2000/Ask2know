@@ -24,56 +24,71 @@
         }
 	}
     
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Log in</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap link gone due to merge conflict -->
+	<link rel="stylesheet" href="./styles/styles.css">
+	<title>Log in</title>
 </head>
+
 <body>
 	<!--<div id="header">
 		<div class="logo"></div>
 	</div>-->
-	
-	<div id="main">
-		<h1 class="header">Log in</h1>
-		<!--<div class="loginfb"></div>
-		<div class="linel"></div>
-		<div class="liner"></div>-->
-		<div id="form">
-			<form method="post" action>
-				<p>E-mailadress</p>
-				<input class="user-input" name="email" placeholder="Email" type="email" required autofocus /> <br>
-				<input class="user-input" name="password" placeholder="Password" type="password" required />
-				<!--<h5>Remember</h5>
-				<input class="btn-toggle btn-toggle-round" id="btn-toggle-1" name="remember" type="checkbox" />
-				<label for="btn-toggle-1"></label>-->
-				<input name="login" type="submit" value="Log in" class="btn"/>
-				<a href="reset.php">Forgot password?</a>
-			</form>
-		</div>
+	<main>
 		
+		<div class="loginfb"></div>
+		<div class="linel"></div>
+		<div class="liner"></div>
+
+		<form method="post" action class="form form--profile">
+			<h2>login</h2>
+			<div class="form__field">
+				<label for="email" class="form-label">Email adress</label>
+				<input name="email" class="form-control" placeholder="Email" type="email" required autofocus />
+			</div>
+			<div class="form__field">
+				<label for="password" class="form-label">Email adress</label>
+				<input name="password" class="form-control" placeholder="Password" type="password" required />
+			</div>
+
+			<div class="form__submit">
+				<button type="submit" class="btn secondary__btn secondary__btn-signup">Login</button>
+				<a href="reset.php" class="btn secondary__btn-reverse secondary__btn-signup">Forgot password?</a>
+			</div>
+		</form>
+		<div class="form__register__relink">
+			<a href="register.php">
+				<p class="">You're new here? <strong>Register</strong></p>
+			</a>
+		</div>
+	</main>
+
+
 	</div>
 
 	<?php if(isset($error)): ?>
-		<div class="user-messages-area">
-			<div class="alert alert-danger">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<ul>
-					<li><?php echo($error);?></li>
-				</ul>
-			</div>
+	<div class="user-messages-area">
+		<div class="alert alert-danger">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+					aria-hidden="true">&times;</span></button>
+			<ul>
+				<li><?php echo($error);?></li>
+			</ul>
 		</div>
+	</div>
 	<?php endif; ?>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <a href="register1.php" >
-        <p class="">You're new here? <strong>Register</strong></p>
-    </a>
-    
+
+
+
 </body>
+
 </html>
