@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/styles.css"> 
     <title>Home</title>
 </head>
 <body>
+<?php include_once(__DIR__ . "/includes/nav.inc.php"); ?>
 
-    <nav>
-        <a href="home.php">Home</a>
-        <a href="help.php">Help</a>
-        <a href="profile.php">Profile</a>
-        <a href="messages.php">Messages</a>
-    </nav>
+    
 
 
     <h1>Hello [name]</h1>

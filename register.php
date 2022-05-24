@@ -45,7 +45,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>Dezine</title>
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
 </head>
@@ -59,6 +59,7 @@
     <?php endif; ?>
 
     <form method="post" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> class="form form--register">
+    <h2>register</h2>
       <div class="form__field">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="email" name="email" class="form-control register--email" id="exampleInputEmail1"
@@ -90,8 +91,14 @@
         <div id="passwordHelp" class="form-text">Fill in special number company</div>
       </div>
 
-      <button type="submit" class="btn btn-primary">Sign me up</button>
+      <button type="submit" class="btn primary__btn">Sign me up</button>
     </form>
+
+    <div class="form__register__relink">
+			<a href="login.php">
+				<p class="">Already an acount? <strong>Login</strong></p>
+			</a>
+		</div>
 
 
   </main>

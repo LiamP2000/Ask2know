@@ -1,0 +1,142 @@
+.nav--right a {
+    border: 3px solid $black;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+        border: 3px solid $secondary;
+    }
+}
+
+.nav--full a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.nav--left a {
+    margin: 0 2rem;
+}
+
+.btn{
+    font-size: $font-size-xxs;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: $white;
+}
+
+.primary__btn{
+    border: none;
+    padding: 0.6rem 0.8rem;
+    color: $white;
+    border-radius: 10px;
+    background-color: $primary;
+
+    &:hover{
+        
+        color: $primary;
+        background-color: $secondary;
+    }
+}
+
+.secondary__btn{
+    border: none;
+    padding: 0.6rem 0.6rem;
+    color: $white;
+    border-radius: 10px;
+    background-color: $primary;
+   
+
+    &:hover{
+        
+        color: $secondary;
+        background-color: $black;
+    }
+}
+
+.secondary__btn-signup{    
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.secondary__btn-reverse{
+   border: none;
+    padding: 0.6rem 0.6rem;
+    color: $white;
+    border-radius: 10px;
+    background-color: $primary;
+    text-align: center;
+
+    &:hover{
+        
+        color: $secondary;
+        background-color: $black;
+    }
+}
+
+.form__register__relink
+{
+    border-radius: 10px;
+    border: 2px solid $black;
+background-color: $primary;
+padding: 10px;
+margin-bottom: 40px;
+
+&:hover{
+        
+   
+    background-color: $tertiary;
+}
+
+}
+
+.form__register__relink a {
+    color: $white;
+}
+
+
+
+
+@media (max-width: 1116px) and (min-width: 768px) {
+    .nav--right a {
+        padding: 0.5rem;
+        margin: 0.1rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+    .nav--right a {
+        background-color: transparent;
+        border: none;
+        margin-right: 10px;
+        margin-top: 0;
+        color: $secondary;
+
+        &:hover {
+            border: none;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .nav--right a {
+        background-color: transparent;
+        border: none;
+        margin-right: 10px;
+        margin-top: 0;
+        color: $secondary;
+
+        &:hover {
+            border: none;
+            border-bottom: 3px solid $secondary;
+        }
+    }
+}
