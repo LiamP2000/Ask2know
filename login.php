@@ -30,26 +30,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- bootstrap link gone due to merge conflict -->
     <link rel="stylesheet" href="style.css">
     <title>Log in</title>
 </head>
 <body>
-	<div id="header">
+	<!--<div id="header">
 		<div class="logo"></div>
-	</div>
+	</div>-->
+	
 	<div id="main">
-		<h1>Log in</h1>
-		<div class="loginfb"></div>
+		<h1 class="header">Log in</h1>
+		<!--<div class="loginfb"></div>
 		<div class="linel"></div>
-		<div class="liner"></div>
+		<div class="liner"></div>-->
 		<div id="form">
 			<form method="post" action>
-				<input name="email" placeholder="Email" type="email" required autofocus /><input name="password" placeholder="Password" type="password" required />
-				<h5>Remember</h5>
+				<p>E-mailadress</p>
+				<input class="user-input" name="email" placeholder="Email" type="email" required autofocus /> <br>
+				<input class="user-input" name="password" placeholder="Password" type="password" required />
+				<!--<h5>Remember</h5>
 				<input class="btn-toggle btn-toggle-round" id="btn-toggle-1" name="remember" type="checkbox" />
-				<label for="btn-toggle-1"></label>
-				<input name="login" type="submit" value="Log in" />
+				<label for="btn-toggle-1"></label>-->
+				<input name="login" type="submit" value="Log in" class="btn"/>
 				<a href="reset.php">Forgot password?</a>
 			</form>
 		</div>

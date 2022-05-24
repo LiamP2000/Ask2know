@@ -14,7 +14,7 @@
 
      
 
-    <ul>
+    <ul class="topics-check">
         <li><input type="checkbox" id="cb1" />
             <label for="cb1"><img src="images/chemical-icon-png-6.png" /></label>
         </li>
