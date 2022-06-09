@@ -16,46 +16,28 @@
             <header>Register</header>
             <form action="">
                 <div class="error-txt">This is an error message</div>
-                <div class="name-details">
-                    <div class="field input">
-                        <label for="">Firstname</label>
-                        <input type="text" placeholder="First name">
-                    </div>
-                    <div class="field input">
-                        <label for="">Lastname</label>
-                        <input type="text" placeholder="Last name">
-                    </div>
-
-                </div>
+                
                 <div class="field input">
-                    <label for="">Email adress</label>
-                    <input type="text" placeholder="Email">
+                    <label for="">Name company</label>
+                    <input type="text" placeholder="Name">
                 </div>
                 <div class="field input">
                     <label for="">Password</label>
                     <input type="text" placeholder="Password">
                     <i class="fa fa-eye"></i>
                 </div>
-<<<<<<< HEAD
-                <div class="field">
-                    <label for="">Confirmation password</label>
-=======
                 <div class="field input">
                     <label for="">conformation password</label>
->>>>>>> main
                     <input type="text" placeholder="Password">
                     <i class="fa fa-eye"></i>
                 </div>
-                <div class="field image">
-                    <label for="">Select image</label>
-                    <input type="file" >
-                </div>
+                
                 <div class="field button">
                     <input type="submit" value="Submit">
                 </div>
 
             </form>
-            <div class="link">Already signed up <a href="">Login now</a></div>
+            
 
         </section>
     </div>
