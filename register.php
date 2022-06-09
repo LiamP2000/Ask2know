@@ -35,7 +35,7 @@
                     <input type="text" placeholder="Password">
                 </div>
                 <div class="field">
-                    <label for="">conformation password</label>
+                    <label for="">Confirmation password</label>
                     <input type="text" placeholder="Password">
                 </div>
                 <div class="field">

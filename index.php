@@ -14,7 +14,7 @@
     <img class="logo" src="images/logo.png" alt="logo"> <br>
 
     <div class="buttons">
-        <a href="login.php" class="btn">Log in</a> <br>
+        <a href="login.php" class="primary__btn">Log in</a> <br>
         <a href="register.php" class="btn">Register</a>
     </div>
     
