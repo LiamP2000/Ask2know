@@ -1,0 +1,79 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #031D3D;
+  }
+  
+  li {
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #093566;
+  }
+  
+  .navigation li a:active {
+    background-color: #FCC300;
+  }
+
+
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 1em 2em;
+    background-color: #093566;
+    color: white;
+    font-size: small;
+    font-weight: 500;
+    transition: all 0.5s;
+    margin: 0.5em;
+}
+
+.card {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "name . date"
+      "question question question"
+      "comments . see-more";
+    width: 80%;
+    background-color: #F7FEFF;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+  
+  .name { grid-area: name; }
+  
+  .date { grid-area: date; }
+  
+  .question { grid-area: question; }
+  
+  .see-more { grid-area: see-more; }
+  
+  .comments { grid-area: comments; }
