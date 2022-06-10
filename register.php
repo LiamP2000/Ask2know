@@ -36,13 +36,8 @@
                     <input type="text" placeholder="Password">
                     <i class="fa fa-eye"></i>
                 </div>
-<<<<<<< HEAD
-                <div class="field">
-                    <label for="">Confirmation password</label>
-=======
                 <div class="field input">
                     <label for="">conformation password</label>
->>>>>>> main
                     <input type="text" placeholder="Password">
                     <i class="fa fa-eye"></i>
                 </div>
