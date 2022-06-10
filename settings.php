@@ -14,7 +14,7 @@
         <a href="home.php">Home</a>
         <a href="help.php">Help</a>
         <a href="profile.php">Profile</a>
-        <a href="messages.php">Messages</a>
+        <a href="chat.php">Messages</a>
     </nav>
 
     <a href="account.php">
