@@ -27,7 +27,7 @@
                     <i class="fa fa-eye"></i>
                 </div>
                 <div class="field input">
-                    <label for="">conformation password</label>
+                    <label for="">Confirmation password</label>
                     <input type="text" placeholder="Password">
                     <i class="fa fa-eye"></i>
                 </div>
