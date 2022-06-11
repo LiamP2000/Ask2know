@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Gegenereerd op: 11 jun 2022 om 14:34
+-- Gegenereerd op: 11 jun 2022 om 15:16
 -- Serverversie: 5.7.34
 -- PHP-versie: 7.4.21
 
@@ -36,14 +36,6 @@ CREATE TABLE `questions` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Gegevens worden geëxporteerd voor tabel `questions`
---
-
-INSERT INTO `questions` (`id`, `userId`, `question`, `image`, `topic`, `date`) VALUES
-(1, 1, 'aaa', 'test.jpg', 'Electronics', '2022-06-10 12:48:26'),
-(2, 2, 'cvezc', 'vrees', 'vrees', '2022-06-10 12:59:57');
-
 -- --------------------------------------------------------
 
 --
@@ -53,10 +45,11 @@ INSERT INTO `questions` (`id`, `userId`, `question`, `image`, `topic`, `date`) V
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `firstname` varchar(300) NOT NULL,
+  `lastname` varchar(300) NOT NULL,
   `email` varchar(300) NOT NULL,
+  `company` varchar(300) NOT NULL,
   `password` varchar(300) NOT NULL,
-  `profile_picture` varchar(300) NOT NULL,
-  `company` varchar(300) NOT NULL
+  `profile_picture` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
