@@ -13,8 +13,12 @@
     
 <?php include_once(__DIR__ . "/nav.inc.php"); ?>
 
-    <a href="login.php" class="btn">Log in</a> <br>
-    <a href="register.php" class="btn">Register</a>
+
+    <div class="login-register">
+        <a href="login.php" class="btn">Log in</a> <br>
+        <a href="register.php" class="btn">Register</a>
+    </div>
+    
     
 
     <h1>Hello [name]</h1>
@@ -36,14 +40,6 @@
         <div class="comments">
             <p>[amount of comments]</p>
         </div>
-    </div>
-
-    <div>
-        
-        
-        
-        
-        
     </div>
 
     <h2>Message from the company</h2>

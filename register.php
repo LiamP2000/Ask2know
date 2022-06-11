@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,34 +18,38 @@
         <section class="form signup">
             <header>Register</header>
             <form action="">
-                <div class="error-txt">This is an error message</div>
+                <!--<div class="error-txt">This is an error message</div>-->
                 <div class="name-details">
                     <div class="field input">
-                        <label for="">Firstname</label>
-                        <input type="text" placeholder="First name">
+                        <label for="">First name</label>
+                        <input type="text">
                     </div>
                     <div class="field input">
-                        <label for="">Lastname</label>
-                        <input type="text" placeholder="Last name">
+                        <label for="">Last name</label>
+                        <input type="text">
                     </div>
 
                 </div>
                 <div class="field input">
-                    <label for="">Email adress</label>
-                    <input type="text" placeholder="Email">
+                    <label for="">E-mailadress</label>
+                    <input type="text">
+                </div>
+                <div class="field input">
+                    <label for="">Company password</label>
+                    <input type="text">
                 </div>
                 <div class="field input">
                     <label for="">Password</label>
-                    <input type="text" placeholder="Password">
+                    <input type="password">
                     <i class="fa fa-eye"></i>
                 </div>
                 <div class="field input">
                     <label for="">Confirmation password</label>
-                    <input type="text" placeholder="Password">
+                    <input type="password">
                     <i class="fa fa-eye"></i>
                 </div>
                 <div class="field image">
-                    <label for="">Select image</label>
+                    <label for="">Upload profile picture</label>
                     <input type="file" >
                 </div>
                 <div class="field button">
@@ -50,7 +57,7 @@
                 </div>
 
             </form>
-            <div class="link">Already signed up <a href="">Login now</a></div>
+            <div class="link">Already signed up? <a href="login.php">Login</a></div>
 
         </section>
     </div>

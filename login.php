@@ -15,15 +15,14 @@
         <section class="form login">
             <header>Login</header>
             <form action="">
-                <div class="error-txt">This is an error message</div>
                 
                 <div class="field input">
-                    <label for="">Email adress</label>
-                    <input type="text" placeholder="Email">
+                    <label for="">E-mailadress</label>
+                    <input type="text">
                 </div>
                 <div class="field input">
                     <label for="">Password</label>
-                    <input type="text" placeholder="Password">
+                    <input type="text">
                     <i class="fa fa-eye"></i>
                 </div>
                 
@@ -32,7 +31,7 @@
                 </div>
 
             </form>
-            <div class="link">Not yet signed up?<a href="">Signup now</a></div>
+            <div class="link">Not yet signed up?<a href="register.php"> Signup now</a></div>
 
         </section>
     </div>

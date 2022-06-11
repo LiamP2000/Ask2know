@@ -12,14 +12,41 @@
 <body>
 <?php include_once(__DIR__ . "/nav.inc.php"); ?>
 
-    <img src="/" alt="profile-pic">
+    <div class="profile">
+        <div class="settings"><a href="settings.php">
+            <img class="settings-icon" src="images/settings.svg" alt="settings">
+    </a></div>
+        <div class="profile-picture">
+            <img class="avatar" src="profile-pictures/avatar1.jpg" alt="profile-pic">
+        </div>
+        <div class="full-name">
+            <h1>[name]</h1>
+        </div>
+        <div class="job">
+            <img class="briefcase-icon" src="images/briefcase.svg" alt="settings">
+            <h4> Technician at Duracell Aarschot</h4>
+        </div>
+        <div class="questions-asked">
+            <h4>Questions asked</h4>
+            <p>3</p>
+        </div>
+        <div class="questions-answered">
+            <h4>Questions answered</h4>
+            <p>1</p>
+        </div>
+        <div class="approved-solutions">
+            <h4>Approved solutions</h4>
+            <p>2</p>
+        </div>
+        
+    </div>
+    
+    
 
-    <h1>[name]</h1>
-    <p>[company]</p>
+   
+    
 
-    <a href="settings.php">
-        <img src="images/settings.svg" alt="settings">
-    </a>
+    
     
     
 
