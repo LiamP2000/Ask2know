@@ -19,13 +19,7 @@
     <title>Home</title>
 </head>
 <body>
-
-    <nav>
-        <a href="home.php">Home</a>
-        <a href="help.php">Help</a>
-        <a href="profile.php">Profile</a>
-        <a href="chat.php">Messages</a>
-    </nav>
+<?php include_once(__DIR__ . "/nav.inc.php"); ?>
 
     <form action="" method="post">
         <div>
