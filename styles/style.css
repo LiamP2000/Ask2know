@@ -77,3 +77,84 @@ ul {
   .see-more { grid-area: see-more; }
   
   .comments { grid-area: comments; }
+
+  /* profile.php */
+
+.profile {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . settings"
+      ". profile-picture ."
+      ". full-name ."
+      "job job job"
+      "questions-asked questions-answered approved-solutions";
+  }
+  
+  .settings { grid-area: settings; }
+  
+  .profile-picture { grid-area: profile-picture; }
+  
+  .job { grid-area: job; }
+  
+  .questions-asked { grid-area: questions-asked; }
+  
+  .questions-answered { grid-area: questions-answered; }
+  
+  .approved-solutions { grid-area: approved-solutions; }
+  
+  .full-name { grid-area: full-name; }
+  
+
+  .questions-asked, .approved-solutions, .questions-answered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile p, .full-name{
+    text-align: center;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .job{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .job h4{
+    margin-left: 20px;
+  }
+
+  .briefcase-icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+  }
+
+  .settings-icon{
+    width: 40px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+  }
+
+
+/* index.php */
+
+.login-register{
+  display:flex;
+  float: right;
+  margin-top: 30px;
+}
+
+
