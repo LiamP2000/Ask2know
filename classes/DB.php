@@ -4,7 +4,7 @@
         private static $conn;
 
         public static function getConnection(){
-            include_once(__DIR__ . "/../settings/settings.php");
+            include_once(__DIR__ . "/../settings/db-settings.php");
 
 
             if(self::$conn === null){
