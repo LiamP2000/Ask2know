@@ -1,6 +1,6 @@
 <?php
 
-    include_once("autoloader.php");
+    include_once('core/autoloader.php');
     $conn = new PDO('mysql:host=localhost;dbname=A2K', "root", "root");
     $result = $conn->query("select * from questions");
     //var_dump($result);
