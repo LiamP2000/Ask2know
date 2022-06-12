@@ -49,7 +49,7 @@
     <form action="" method="post" enctype="multipart/form-data">
         <div>
             <label class="issue" for="question">What's the issue?</label><br>
-            <input type="text" name="question" id="question">
+            <textarea name="question" id="question"  rows="4" cols="50"></textarea>
         </div>
 
         <div>
