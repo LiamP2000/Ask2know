@@ -61,11 +61,16 @@ ul {
       "question question question"
       "comments . see-more";
     width: 80%;
-    background-color: #F7FEFF;
+    background-color: #FCC300 ; /* #F7FEFF */
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     padding: 1em;
+  }
+
+  .card .date p{
+    font-size: small;
   }
   
   .name { grid-area: name; }
@@ -166,6 +171,58 @@ ul {
 
 .ask-question div{
   margin-bottom: 20px;
+}
+
+
+/* feed.php */
+
+.feed-top{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left:0;
+}
+
+.search{
+  margin-top: 7px;
+  height: 35px;
+  width: 300px;
+  border-radius: 7px;
+}
+
+
+/* question.php */
+
+.detail-card {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "name . date"
+    "question question question"
+    "image image image";
+  width: 80%;
+  background-color: #FCC300 ; /* #F7FEFF */
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 1em;
+}
+
+.name { grid-area: name; }
+
+.date { grid-area: date; }
+
+.question { grid-area: question; }
+
+.image { grid-area: image; }
+
+.detail-image{
+  width: 80%;
 }
 
 
