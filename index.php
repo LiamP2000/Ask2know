@@ -28,9 +28,11 @@
     </div>
     
     
-
-    <h1>Hello [name]</h1>
-    <p>Maybe you can help with these issues?</p>
+    <div class="headers-index">
+        <h1>Hello [name]</h1>
+        <p>Maybe you can help with these issues?</p>
+    </div>
+    
 
     <?php foreach($questions as $q): ?>
         <div class="card">
@@ -52,7 +54,9 @@
         </div>
     <?php endforeach; ?>
 
-    <h2>Message from the company</h2>
+    <div class="headers-index">
+        <h2>Message from the company</h2>
+    </div>    
     
 </body>
 </html>
