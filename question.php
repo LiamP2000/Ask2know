@@ -1,11 +1,16 @@
 <?php
-    include_once('classes/DB.php');
     include_once('core/autoloader.php');
     $questionId = $_GET['questionId'];
     //var_dump($questionId);
     $question= Question::getQuestionById($questionId);
     //var_dump($question);
+    $allComments = Comment::getAllComments($questionId);
+    //var_dump($allComments);
 
+    //$amountOfComments = count($allComments);
+    //var_dump($amountOfComments);
+
+    
 
 
 ?><!DOCTYPE html>
@@ -38,7 +43,22 @@
                 <img class="detail-image" src="<?php echo htmlspecialchars($question['image']) ?>" alt="">
             </div>
         </div>
+
+
+        <div class="post__comments">
+            <div class="post__comments__form">
+                <h5 class="">Comments</h5>
+                <input class="" type="text" id="commentText">
+                <p href="#" class="btn" id="btnAddComment" data-questionid=<?php echo $questionId ?>>Add comment</p>
+            </div>
+            <ul class="post__comments__list">
+                <?php foreach($allComments as $c):  ?>
+                <p><strong>name</strong></p>
+                <li><?php echo $c['text'];?></li><br> 
+                <?php endforeach; ?>
+            </ul>
+        </div>
     
-    
+    <script src="js/comments.js"></script>
 </body>
 </html>
