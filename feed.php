@@ -34,7 +34,6 @@
         <a class="btn" href="make_question.php">Make question</a>
     </div>
 
-    <p>[filter met alle topics die geshowed moeten worden]</p>
 
     <?php foreach($questions as $q): ?>
         <div class="card">
