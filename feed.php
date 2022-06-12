@@ -2,7 +2,7 @@
 
     include_once('core/autoloader.php');
     $questions = Question::getAll();
-    var_dump($questions);
+    //var_dump($questions);
 
 
 
