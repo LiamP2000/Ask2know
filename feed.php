@@ -5,6 +5,12 @@
     //var_dump($questions);
 
 
+    //$amountOfComments = Comment::getAmountOfCommentsByQuestionId($questions[0]['questionId']);
+    //var_dump($amountOfComments);
+
+    
+
+
 
 ?><!DOCTYPE html>
 <html lang="en">
