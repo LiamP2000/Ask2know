@@ -1,9 +1,8 @@
 <?php
 
     include_once('core/autoloader.php');
-    $conn = new PDO('mysql:host=localhost;dbname=A2K', "root", "root");
-    $result = $conn->query("select * from questions");
-    //var_dump($result);
+    $questions = Question::getAll();
+    var_dump($questions);
 
 
 
@@ -24,30 +23,34 @@
 
     <div class="wrapper">
     
-
-    <input type="text" placeholder="Search..">
+    <div class="feed-top">
+        <input class="search" type="text" placeholder="Search..">
+        <a class="btn" href="make_question.php">Make question</a>
+    </div>
 
     <p>[filter met alle topics die geshowed moeten worden]</p>
 
-    <div class="card">
-        <div class="name">
-            <p><strong>[name]</strong></p>
+    <?php foreach($questions as $q): ?>
+        <div class="card">
+            <div class="name">
+                <p><strong>[name]</strong></p>
+            </div>
+            <div class="date">
+                <p><?php echo htmlspecialchars($q['date']); ?></p>
+            </div>
+            <div class="question">
+                <p><?php echo htmlspecialchars($q['question']); ?></p>
+            </div>
+            <div class="see-more">
+            <a href="question.php?questionId=<?php echo $q["id"]; ?>" class="btn">see more</a>
+            </div>
+            <div class="comments">
+                <p>[amount of comments]</p>
+            </div>
         </div>
-        <div class="date">
-            <p>[date]</p>
-        </div>
-        <div class="question">
-            <p>[issue]</p>
-        </div>
-        <div class="see-more">
-            <a href="#" class="btn">see more</a> <!-- detail.php? -->
-        </div>
-        <div class="comments">
-            <p>[amount of comments]</p>
-        </div>
-    </div>
+    <?php endforeach; ?>
 
-    <a class="btn" href="make_question.php">Make question</a>
+    
 
     </div>
     
