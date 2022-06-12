@@ -1,21 +1,17 @@
 <?php
+	class DB {
+		private static $conn;
 
-    class Db{
-        private static $conn;
+		public static function getInstance() {
+			include_once(__DIR__ ."/../core/db-settings.php");
 
-        public static function getConnection(){
-            include_once(__DIR__ . "/../settings/db-settings.php");
-
-
-            if(self::$conn === null){
-                self::$conn = new PDO('mysql:host='. SETTINGS['db']['host'].';dbname='. SETTINGS['db']['db'].'', SETTINGS['db']['user'], SETTINGS['db']['password']);
-                return self::$conn;
-            } else{
-                return self::$conn;
-            }
-
-            
-        }
-
-
-    }
+			if(self::$conn === null){
+				self::$conn = new PDO("mysql:host=" . SETTINGS['db']['host'] . ";charset=utf8;dbname=" . SETTINGS['db']['db'] , SETTINGS['db']['user'] , SETTINGS['db']['password']);
+				return self::$conn;
+			} 
+			else {
+				return self::$conn;
+			}
+		}
+	}
+?>
