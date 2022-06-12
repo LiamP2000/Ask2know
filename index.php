@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+
+    include_once('core/autoloader.php');
+    $questions = Question::getAll();
+    //var_dump($questions);
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,23 +32,25 @@
     <h1>Hello [name]</h1>
     <p>Maybe you can help with these issues?</p>
 
-    <div class="card">
-        <div class="name">
-            <p><strong>[name]</strong></p>
+    <?php foreach($questions as $q): ?>
+        <div class="card">
+            <div class="name">
+                <p><strong>[name]</strong></p>
+            </div>
+            <div class="date">
+                <p><?php echo htmlspecialchars($q['date']); ?></p>
+            </div>
+            <div class="question">
+                <p><?php echo htmlspecialchars($q['question']); ?></p>
+            </div>
+            <div class="see-more">
+                <a href="#" class="btn">see more</a> <!-- detail.php? -->
+            </div>
+            <div class="comments">
+                <p>[amount of comments]</p>
+            </div>
         </div>
-        <div class="date">
-            <p>[date]</p>
-        </div>
-        <div class="question">
-            <p>[issue]</p>
-        </div>
-        <div class="see-more">
-            <a href="#" class="btn">see more</a> <!-- detail.php? -->
-        </div>
-        <div class="comments">
-            <p>[amount of comments]</p>
-        </div>
-    </div>
+    <?php endforeach; ?>
 
     <h2>Message from the company</h2>
     
