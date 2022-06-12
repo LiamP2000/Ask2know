@@ -157,4 +157,16 @@ ul {
   margin-top: 30px;
 }
 
+/* make_question.php */
+
+.ask-question{
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.ask-question div{
+  margin-bottom: 20px;
+}
+
+
 
