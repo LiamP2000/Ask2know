@@ -44,7 +44,7 @@
                 <p><?php echo htmlspecialchars($q['question']); ?></p>
             </div>
             <div class="see-more">
-                <a href="#" class="btn">see more</a> <!-- detail.php? -->
+                <a href="question.php?questionId=<?php echo $q["id"]; ?>" class="btn">see more</a>
             </div>
             <div class="comments">
                 <p>[amount of comments]</p>
