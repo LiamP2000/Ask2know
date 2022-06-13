@@ -1,6 +1,7 @@
 <?php
 
     include_once('core/autoloader.php');
+    include_once(__DIR__ . "/classes/User.php");
     $questions = Question::getAll();
     //var_dump($questions);
 
@@ -41,7 +42,7 @@
     <?php foreach($questions as $q): ?>
         <div class="card">
             <div class="name">
-                <p><strong>[name]</strong></p>
+                <p><strong><?php echo User::getUser($_SESSION['user'])["firstname"]; ?>  <?php echo User::getUser($_SESSION['user'])["lastname"]; ?></strong></p>
             </div>
             <div class="date">
                 <p><?php echo htmlspecialchars($q['date']); ?></p>

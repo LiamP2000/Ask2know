@@ -31,7 +31,7 @@
     
         <div class="detail-card">
             <div class="name">
-                <p><strong>[name]</strong></p>
+                <p><strong><?php echo User::getUser($_SESSION['user'])["firstname"]; ?>  <?php echo User::getUser($_SESSION['user'])["lastname"]; ?></strong></p>
             </div>
             <div class="date">
                 <p><?php echo htmlspecialchars($question['date']); ?></p>
@@ -53,7 +53,7 @@
             </div>
             <ul class="post__comments__list">
                 <?php foreach($allComments as $c):  ?>
-                <p><strong>name</strong></p>
+                <p><strong><?php echo User::getUser($_SESSION['user'])["firstname"]; ?>  <?php echo User::getUser($_SESSION['user'])["lastname"]; ?></strong></p>
                 <li><?php echo $c['text'];?></li><br> 
                 <?php endforeach; ?>
             </ul>

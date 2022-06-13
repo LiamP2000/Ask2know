@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+
+    include_once('core/autoloader.php');
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,7 +23,7 @@
             <img class="avatar" src="profile-pictures/avatar1.jpg" alt="profile-pic">
         </div>
         <div class="full-name">
-            <h1>[name]</h1>
+            <h1><?php echo User::getUser($_SESSION['user'])["firstname"]; ?>  <?php echo User::getUser($_SESSION['user'])["lastname"]; ?></h1>
         </div>
         <div class="job">
             <img class="briefcase-icon" src="images/briefcase.svg" alt="settings">

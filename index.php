@@ -29,7 +29,7 @@
     
     
     <div class="headers-index">
-        <h1>Hello [name]</h1>
+        <h1>Hello <?php echo User::getUser($_SESSION['user'])["firstname"]; ?>  <?php echo User::getUser($_SESSION['user'])["lastname"]; ?></h1>
         <p>Maybe you can help with these issues?</p>
     </div>
     
@@ -37,7 +37,7 @@
     <?php foreach($questions as $q): ?>
         <div class="card">
             <div class="name">
-                <p><strong>[name]</strong></p>
+                <p><strong><?php echo User::getUser($_SESSION['user'])["firstname"]; ?>  <?php echo User::getUser($_SESSION['user'])["lastname"]; ?></strong></p>
             </div>
             <div class="date">
                 <p><?php echo htmlspecialchars($q['date']); ?></p>
