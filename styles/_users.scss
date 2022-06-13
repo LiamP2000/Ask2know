@@ -1,10 +1,146 @@
 .users {
     padding: 25px 30px;
 }
-.users header{
+
+.users header,
+.users-list a {
     display: flex;
     align-items: center;
     padding-bottom: 20px;
     justify-content: space-between;
-    border: 1px solid;
+    border-bottom: 1px solid black;
+}
+
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+:is(.users, .users-list) .content {
+
+    display: flex;
+    align-items: center;
+}
+
+.users header .content img {
+    height: 50px;
+    width: 50px;
+}
+
+:is(.users, .users-list) .details {
+    color: #333;
+    margin-left: 15px;
+}
+
+:is(.users, .users-list) .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.users header .logout {
+    color: aliceblue;
+    font-size: 17px;
+    padding: 7px 15px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.users .search .text {
+    font-size: 18px;
+}
+
+.users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 1px solid black;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+
+}
+
+.users .search input.active {
+opacity: 1;
+pointer-events: auto;
+}
+
+.users .search button {
+
+    position: relative;
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #333;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 17px;
+}
+
+.users .search button.active {
+    color: aliceblue;
+    background: #333;
+}
+
+.users .search button.active i::before{
+    content: "\f00d";
+}
+
+.users-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.users-list::-webkit-scrollbar {
+    width: 0px
+}
+
+.users-list a {
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: rgb(29, 29, 29);
+}
+
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+
+
+
+.users-list a .content img {
+    height: 40px;
+    width: 40px;
+}
+
+.users-list a .content p {
+    color: rgb(114, 114, 114);
+}
+
+.users-list a .status-dot{
+    color: rgb(176, 33, 33);
+    font-size: 12px;
+}
+
+
+.users-list a .status-dot.offline{
+    color: white;
+
 }

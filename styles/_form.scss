@@ -29,6 +29,8 @@ li {
     border-radius: 5px;
     margin-bottom: 10px;
     border: 1px solid $black;
+    display: none;
+   
 }
 
 .form form .name-details {
@@ -102,6 +104,10 @@ form .name-details .field:last-child{
     cursor: pointer;
 }
 
+.form form .field i.active::before {
+    content: "\f070";
+    color:#333;
+}
 .form .link {
     text-align: center;
     margin: 10px 0;

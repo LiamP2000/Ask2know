@@ -1,4 +1,28 @@
-<!DOCTYPE html>
+<?php
+
+include_once('core/autoloader.php');
+include_once(__DIR__ . "/classes/User.php");
+if (!empty($_POST)) {
+    try {
+        $user = new User();
+        $user->setEmail($_POST['email']);
+        $user->setPassword($_POST["password"]);
+        if ($user->canLogin()) {
+            session_start();
+            $_SESSION['user'] = $user->getEmail();
+            header("Location:feed.php");
+        }
+    }catch (\Throwable $e){
+        $error = $e->getMessage();
+      
+
+    }
+
+}
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,15 +38,15 @@
     <div class="wrapper">
         <section class="form login">
             <header>Login</header>
-            <form action="">
+            <form method= "post" action="">
                 
                 <div class="field input">
-                    <label for="">E-mailadress</label>
-                    <input type="text">
+                    <label for="email">E-mailadress</label>
+                    <input type="email" name="email">
                 </div>
                 <div class="field input">
                     <label for="">Password</label>
-                    <input type="text">
+                    <input type="password" name="password">
                     <i class="fa fa-eye"></i>
                 </div>
                 
@@ -35,6 +59,7 @@
 
         </section>
     </div>
+    <script src="javascript/pass-show-hide.js"></script>
 </body>
 
 </html>

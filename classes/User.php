@@ -1,183 +1,159 @@
 <?php
-    include_once(__DIR__ . "/../autoloader.php");
-    include_once(__DIR__ . "/../helpers/Cleaner.feed.php");
+
+class User
+{
+    private $email;
+    private $password;
+    private $firstname;
+    private $lastname;
+    private $company;
 
 
-    class User
+    /**
+     * Get the value of email
+     */
+    public function getEmail()
     {
-        private $username;
-        private $email;
-        private $password;
-        private $password_comp;
-    
-        //profile image
-        private $profile_image;
-        //social links
-        //second email
-        private $second_email;
-        const PASSWORD_MIN_LENGTH = 6;
-        //role
-        private $role;
-
-        public function getUsername()
-        {
-            return $this->username;
-        }
-
-        public function setUsername($username)
-        {
-            $username = Cleaner::cleanInput($username);
-            $this->username = $username;
-            return $this;
-        }
-
-        //emails setters and getters
-        public function getEmail()
-        {
-            return $this->email;
-        }
-        
-        public function setEmail($email)
-        {
-            $email = Cleaner::cleanInput($email);
-            $this->email = $email;
-            return $this;
-        }
-
-        public function getCompanyCode()
-        {
-            return $this->password_comp;
-        }
-        
-        public function setCompanyCode($password_comp)
-        {
-            $password_comp = Cleaner::cleanInput($password_comp);
-            $this->password_comp = $password_comp;
-            return $this;
-        }
-
-        public function getSecondEmail()
-        {
-            return $this->second_email;
-        }
-        
-        public function setSecondEmail($second_email)
-        {
-            $second_email = Cleaner::cleanInput($second_email);
-            $this->second_email = $second_email;
-            return $this;
-        }
-
-        //profile_image
-        public function getProfileImage()
-        {
-            return $this->profile_image;
-        }
-
-        public function setProfileImage($profile_image)
-        {
-            $profile_image = Cleaner::cleanInput($profile_image);
-            $this->profile_image = $profile_image;
-            return $this;
-        }
-
-        //password
-        public function getPassword()
-        {
-            return $this->password;
-        }
-
-        public function setPassword($password)
-        {
-            $password = Cleaner::cleanInput($password);
-            if (strlen($password) < self::PASSWORD_MIN_LENGTH) {
-                throw new Exception("Passwords must be " . self::PASSWORD_MIN_LENGTH . " characters or longer.");
-            }
-            $this->password = $password;
-            return $this;
-        }
-
-    
-
-        public function canLogin()
-        {
-            $conn = DB::getInstance();
-            $statement = $conn->prepare("select * from users where email = :email");
-            $statement->bindValue(':email', $this -> email);
-            $statement->execute();
-            $res = $statement->fetch(PDO::FETCH_ASSOC);
-
-            if (!$res) {
-                throw new Exception("No user was found with this email");
-            }
-
-            if (password_verify($this->password, $res["password"])) {
-                return $res;
-            }
-
-            throw new Exception("This password does not match the given email");
-        }
-
-        public function register($referLink = "")
-        {
-            if (!$this->userExists()) {
-                if (strlen($referLink) === 0) {
-                    $regex = '/[a-zA-Z0-9_.+-]+@(company\.)?company\.be/';
-                    if (!preg_match($regex, $this->email)) {
-                        throw new Exception("Please use your company account to register");
-                    }
-                }
-                $options = [
-                'cost' => 15
-                ];
-                $password = password_hash($this->password, PASSWORD_DEFAULT, $options);
-
-                $conn = DB::getInstance();
-                $statement = $conn->prepare("insert into users (username, email, password, user_role, company) values (:username, :email, :password, 'user', :company);");
-                $statement->bindValue(':username', $this->username);
-                $statement->bindValue(':email', $this->email);
-                $statement->bindValue(':password', $password);
-                $statement->bindValue(':company', $this->password_comp);
-                $statement->execute();
-                $res = $conn->lastInsertId();
-                return $res;
-            } else {
-                throw new Exception("This email address is already in use");
-            }
-        }
-
-        public function userExists()
-        {
-            $conn = DB::getInstance();
-            $statement = $conn->prepare("select * from users where email = :email");
-            $statement->bindValue(':email', $this->email);
-            $statement->execute();
-            $res = $statement->fetch();
-            return $res;
-        }
-
-        public function usernameExists()
-        {
-            $conn = DB::getInstance();
-            $statement = $conn->prepare("select * from users where username = :username");
-            $statement->bindValue(':username', $this->username);
-            $statement->execute();
-            $res = $statement->fetch();
-            return $res;
-        }
-
-        
-
-       
-
-
-        public function getUser()
-        {
-            $conn = DB::getInstance();
-            $statement = $conn->prepare("select username, education, bio, linkedin, website, instagram, github, second_email, profile_image from users where email = :email");
-            $statement->bindValue(':email', $this->email);
-            $statement->execute();
-            $result = $statement->fetch();
-            return $result;
-        }
+        return $this->email;
     }
+
+    /**
+     * Set the value of email
+     *
+     * @return  self
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * Set the value of firstname
+     *
+     * @return  self
+     */
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * Set the value of lastname
+     *
+     * @return  self
+     */
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getCompany()
+    {
+        return $this->company;
+    }
+
+    /**
+     * Set the value of company
+     *
+     * @return  self
+     */
+    public function setCompany($company)
+    {
+        $this->company = $company;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of password
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set the value of password
+     *
+     * @return  self
+     */
+    public function setPassword($password)
+    {
+        if (strlen($password) < 5) {
+            throw new Exception("Passwords must be longer than 5 characters.");
+        }
+
+        $this->password = $password;
+        return $this;
+    }
+
+    public function canLogin()
+    {
+
+        // this function should check if a user can login with the password and user provided
+        // use password_verify() to verify your user
+        // this function should return true or false and nothing else
+        $conn = DB::getInstance();
+        $statement = $conn->prepare("select email, password from users where email = :email");
+        $statement->bindValue("email", $this->email);
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($user) {
+            $hash = $user['password'];
+            if (password_verify($this->password, $hash)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+
+            throw new Exception("user does not exist");
+        }
+
+
+    }
+
+   
+    public function register()
+    {
+        $options = [
+            'cost' => 13
+        ];
+        $password = password_hash($this->password, PASSWORD_DEFAULT, $options);
+
+        $conn = DB::getInstance();
+        $statement = $conn->prepare("insert into users (email, password,firstname,lastname,company) values (:email, :password,:firstname,:lastname,:company);");
+        $statement->bindValue(':firstname', $this->firstname);
+        $statement->bindValue(':lastname', $this->lastname);
+        $statement->bindValue(':company', $this->company);
+        $statement->bindValue(':email', $this->email);
+        $statement->bindValue(':password', $password);
+        return $statement->execute();
+    }
+
+
+    public static function getUser($email){
+        $conn = DB::getInstance();
+        $statement = $conn->prepare("select firstname, lastname, company from users where email = :email");
+        $statement->bindValue(':email', $email);
+        $statement->execute();
+        $result = $statement->fetch();
+        return $result;
+    }
+}

@@ -11,7 +11,10 @@
 			} 
 			else {
 				return self::$conn;
+				
 			}
 		}
 	}
+
+
 ?>

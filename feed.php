@@ -9,6 +9,9 @@
     //var_dump($amountOfComments);
 
     
+    $conn = new PDO('mysql:host=localhost;dbname=A2K', "root", "");
+    $result = $conn->query("select * from questions");
+    //var_dump($result);
 
 
 
